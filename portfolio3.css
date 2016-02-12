@@ -1,0 +1,288 @@
+/*Prélude*********************************************************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body{
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  color: white
+}
+
+html{
+  box-sizing: border-box;
+  /*scroll-behavior: smooth;*/
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/*Corps**********************************************************/
+
+.section, footer{
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  border-bottom: 1px grey;
+  display: flex;
+  flex-direction: column;
+}
+
+#section1{
+  background-image: url(CV1.png);
+  height: 100%;
+  background-size: 100%;
+  background-position: 10%;
+}
+
+/*section 1*****************************************************/
+
+header{
+  display: flex;
+  width: 100%;
+}
+
+ul{
+  margin-top: 15vh;
+  width:100vw;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 10vw;
+}
+
+#prenom{
+  font-weight: normal;
+  position: absolute;
+  margin-top: 15vh;
+  font-size: 1.4em;
+  margin-left: 10vw;
+}
+
+li{
+  margin-left: 50px;
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+
+#intro{
+  display: flex;
+  height: 50vh;
+  width: 70vw;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#textIntro{
+  font-size: 2.4em;
+  display: flex;
+  font-weight: 500;
+}
+
+#rondScroll{
+  display: flex;
+  margin: 30px auto;
+  height: 70px;
+  width: 70px;
+  border: 1px solid red;
+  border-radius: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+#rondScroll:hover{
+  background-color: rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+
+#rondScroll:hover #textScroll{
+  color: red;
+}
+
+#textScroll{
+  font-style: italic;
+  font-weight: lighter;
+}
+
+/* Section 2*********************************************************************/
+
+#section2{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projet{
+ display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.opacite{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction:raw;
+  }
+
+#p1{
+  background-image: url(p1.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  }
+
+#p1:hover{
+  background-size: 130% 130%;
+  animation-name: zoomin;
+  animation-duration: 3s;
+}
+
+@keyframes zoomin{
+  from{
+    background-size: 100% 100%;
+}
+  to{
+    background-size: 130% 130%;
+}
+}
+
+.ipsum{
+  position: absolute;
+  display: none;
+  margin-left: 3vw;
+  padding-top: 3vh;
+  /*background-color: green;*/
+  animation-name: apparition;
+  animation-duration: 0.5s;
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    margin-left: 50%
+  }
+
+  25%{
+    opacity: 0;
+}
+
+  to {
+    opacity: 1;
+  }
+}
+
+.projet:hover .ipsum{
+  display: block;
+}
+
+.fenetre{
+  /*display:flex*/
+  display: none;
+  height: 10vh;
+  width: 100%;
+  background-color: blue;
+  align-self: flex-end;
+  animation-name: apparitionFenetre;
+  animation-duration: 0.5s;
+  /*animation-delay: 1.5s;*/
+
+}
+
+.projet:hover .fenetre{
+  display:block
+}
+
+@keyframes apparitionFenetre {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height:20%;
+  }
+}
+
+.detail{
+  margin-top: 1.3vh;
+  margin-left: 3vw;
+
+}
+
+.resume{
+margin-left: 3vw;
+}
+
+
+#p2{
+  background-image: url(blur.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+#p2:hover{
+  background-size: 130% 130%;
+  animation-name: zoominN;
+  animation-duration: 3s;
+}
+
+@keyframes zoominN{
+  from{
+    background-size: 100% 100%;
+}
+  to{
+    background-size: 130% 130%;
+}
+}
+
+
+#p3{
+  background-image: url(p3.jpeg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+#p3:hover{
+  background-size: 100% 100%;
+  animation-name: zoominNn;
+  animation-duration: 3s;
+}
+
+@keyframes zoominNn{
+  from{
+    background-size: 100% 100%;
+}
+  to{
+    background-size: 130% 130%;
+}
+}
+
+
+#p4{
+  background-image: url(p4.png);
+  background-size: 100% 100%;
+  background-position: center;
+}
+#p4:hover{
+  background-size: 100% 100%;
+  animation-name: zoominNn;
+  animation-duration: 3s;
+}
+
+@keyframes zoominNn{
+  from{
+    background-size: 100% 100%;
+}
+  to{
+    background-size: 130% 130%;
+}
+}
+
+
+/*footer*************************************************************************/
+
+#mesInspirations{
+  height: 30vh;
+  width: 100%;
+  background-color: red;
+}
